@@ -22,11 +22,11 @@ import requests
 # =========================================================
 # KONFİQURASİYA — bunları öz məlumatlarınla doldur
 # =========================================================
-BOT_TOKEN = "8969339932:AAEXu8eRqNSzIzyC9lIyXi-hYI8Chh7dAT8"          # BotFather-dan
+BOT_TOKEN = "8779646133:AAG62uCce6PVfE-_QjH_FNxl8TzN0-kGBzQ"          # BotFather-dan
 ADMIN_CHAT_ID = 6693360037                               # Sənin Telegram ID-n (@userinfobot)
 ADMIN_API_KEY = "yu2008sif"  # main.py-dəki ADMIN_API_KEY ilə EYNİ olmalıdır
-BACKEND_URL = "http://127.0.0.1:8001"           # Deploy etdikdən sonra dəyişəcək
-FRONTEND_URL = "https://your-frontend-url.example.com"  # Deploy etdikdən sonra dəyişəcək
+BACKEND_URL = "https://plinkom-backend.onrender.com"           # Deploy etdikdən sonra dəyişəcək
+FRONTEND_URL = "https://plinkom.yusifabbasli1222.workers.dev"  # Deploy etdikdən sonra dəyişəcək
 
 TG_API = f"https://api.telegram.org/bot{BOT_TOKEN}"
 
