@@ -1,14 +1,28 @@
 """
 Plinkom — Ortaq Konfiqurasiya
 ------------------------------
-Bu 3 dəyəri BURADA doldur — həm main.py, həm bot.py bunları buradan oxuyur,
-ona görə iki yerdə eyni şeyi yazmağa ehtiyac yoxdur.
+TƏHLÜKƏSİZLİK QEYDİ: Bu dəyərlər əvvəllər birbaşa bu faylda (və PUBLIC GitHub
+repo-da) saxlanılırdı. İndi əvvəlcə ƏTRAF MÜHİT DƏYİŞƏNLƏRİNDƏN (environment
+variables) oxunur — Render-də "Environment" bölməsində təyin et, kod isə
+ictimai qala bilər, sirlər gizli qalır.
 
-BOT_TOKEN     -> BotFather-dan aldığın token (@BotFather -> /newbot)
-ADMIN_CHAT_ID -> Sənin şəxsi Telegram ID-n (@userinfobot-a yaz, ədədi ID alacaqsan)
-ADMIN_API_KEY -> Özün uydur, gizli saxla (admin əməliyyatlarını qoruyur)
+Render-də təyin etməli olduğun dəyişənlər (Dashboard -> sənin servis ->
+Environment -> "Add Environment Variable"):
+
+  BOT_TOKEN      -> BotFather-dan aldığın token
+  ADMIN_CHAT_ID  -> sənin Telegram ID-n (ədəd)
+  ADMIN_API_KEY  -> özün uydur, gizli bir söz
+  DATABASE_URL   -> Neon Postgres connection string
+  BOT_USERNAME   -> botunun @ olmadan username-i (məs: plinkom_bot)
+
+Aşağıdakı fallback dəyərlər YALNIZ lokal (Termux) test üçündür — production-da
+mütləq Render-in Environment bölməsindən təyin et.
 """
 
-BOT_TOKEN = "8779646133:AAG62uCce6PVfE-_QjH_FNxl8TzN0-kGBzQ"
-ADMIN_CHAT_ID = 6693360037
-ADMIN_API_KEY = "yu2008sif"
+import os
+
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "PUT_YOUR_BOT_TOKEN_HERE")
+ADMIN_CHAT_ID = int(os.environ.get("ADMIN_CHAT_ID", "0") or "0")
+ADMIN_API_KEY = os.environ.get("ADMIN_API_KEY", "change-me-to-a-strong-secret")
+DATABASE_URL = os.environ.get("DATABASE_URL", "")
+BOT_USERNAME = os.environ.get("BOT_USERNAME", "")  # @ olmadan, məs: plinkom_bot
