@@ -32,7 +32,7 @@ DB_PATH = "plinkom.db"
 # ADMIN_CHAT_ID: sənin şəxsi Telegram ID-n (@userinfobot ilə tapa bilərsən).
 # ADMIN_API_KEY: admin endpoint-lərini qorumaq üçün özün uydurduğun gizli açar
 #                (bot.py da eyni açarı istifadə etməlidir).
-BOT_TOKEN = "8969339932:AAEXu8eRqNSzIzyC9lIyXi-hYI8Chh7dAT8"
+BOT_TOKEN = "8779646133:AAG62uCce6PVfE-_QjH_FNxl8TzN0-kGBzQ"
 ADMIN_CHAT_ID = 6693360037  # PUT_YOUR_TELEGRAM_ID_HERE
 ADMIN_API_KEY = "yu2008sif"
 
